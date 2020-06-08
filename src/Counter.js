@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Counter extends Component {
   constructor (props) {
@@ -41,14 +42,13 @@ class Counter extends Component {
     return (
       <div>
         <p id='render-store'>{this.state.counter}</p>
-        <button id='remove10' onClick={this.handleRemove10} >-10</button>
-        <button id='remove' onClick={this.handleRemove1} >-</button>
-        <button id='reset' onClick={this.handleReset} >Reset</button>
-        <button id='add' onClick={this.handleAdd1} >+</button>
-        <button id='add10' onClick={this.handleAdd10} >+10</button>
+        <button id='remove10' onClick={this.handleRemove10}>-10</button>
+        <button id='remove' onClick={this.handleRemove1}>-</button>
+        <button id='reset' onClick={this.handleReset}>Reset</button>
+        <button id='add' onClick={this.handleAdd1}>+</button>
+        <button id='add10' onClick={this.handleAdd10}>+10</button>
       </div>
     );
   }
 }
- 
-export default Counter;
+export default connect()(Counter);
