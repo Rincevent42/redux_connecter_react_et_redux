@@ -7,7 +7,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import counterReducer from './counterReducer';
 
-const store = createStore(counterReducer);
+const store = createStore(
+  counterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 ReactDOM.render(
   <React.StrictMode>

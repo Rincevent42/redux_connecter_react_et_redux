@@ -5,7 +5,7 @@
 // Augmenter de 10 : { type: 'INC10' }
 // Remise à zéro   : { type: 'RESET' }
 
-const counterReducer = (state = 0, action) => {
+const counterReducer = (state = 1000, action) => {
   switch (action.type) {
     case 'DEC10':
       return state - 10;
